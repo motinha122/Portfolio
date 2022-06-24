@@ -1,0 +1,112 @@
+/* Mixins */
+
+@mixin center-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Body */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    justify-content: flex-end;
+    background-color: #1D1D1D;
+    overflow-x: hidden;
+}
+
+/* Hero */
+
+#main-text {
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: calc(10rem + 3vh);
+    margin-right: auto;
+    margin-bottom: calc(3rem + 3vh);
+    margin-left: calc(3rem + 3vh);
+    transition: 0.4s;
+
+    img {
+        z-index: -1;
+        width: calc(100px + 25vh);
+        position: relative;
+        top: 10%;
+        filter: brightness(0) saturate(100%) invert(11%) sepia(4%) saturate(9%) hue-rotate(342deg) brightness(102%) contrast(85%);
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 4rem;
+        color: #F2ECFF;
+    }
+
+    .name {
+        text-shadow: 0 0 2px #fff;
+        font-weight: bold;
+        font-size: 6rem;
+    }
+
+    .intro {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+
+        span {
+            text-shadow: 0 0 2px #a93e00;
+            color: #a93e00;
+        }
+    }
+}
+
+/* Pages */
+
+main {
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    height: 100vh;
+
+    .pc {
+        margin-top: 30%;
+        width: 30%;
+        margin-right: 5%;
+
+        img {
+            filter: brightness(0) saturate(100%) invert(11%) sepia(4%) saturate(9%) hue-rotate(342deg) brightness(102%) contrast(85%);
+            width: 100%;
+        }
+    }
+    
+    section:hover ~ #main-text{
+        margin-left: 10rem;
+        color: #484848;
+    }
+
+    button {
+        height: 100vh;
+        border: 0;
+        border-left: 2px solid #a93e00;
+        background-color: #1D1D1D;
+        color: #F2ECFF;
+        width: calc(1rem + 5vw);
+        display: flex;
+        transition: 0.4s;
+        justify-content: center;
+
+        &:hover{
+            background-color: #484848;
+            color: #F2ECFF;
+            width: calc(1rem + 6vw);
+
+        }
+
+        span {
+            font-size: 2.5rem;
+            margin-top: 2rem;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    }
+}
+
