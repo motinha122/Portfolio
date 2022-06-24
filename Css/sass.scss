@@ -30,7 +30,7 @@ body {
 
     img {
         z-index: -1;
-        width: calc(100px + 25vh);
+        width: calc(100px + 40vh);
         position: relative;
         top: 10%;
         filter: brightness(0) saturate(100%) invert(11%) sepia(4%) saturate(9%) hue-rotate(342deg) brightness(102%) contrast(85%);
@@ -67,18 +67,24 @@ main {
     overflow-y: hidden;
     height: 100vh;
 
+    /* Laptop */
+
     .pc {
-        margin-top: 30%;
-        width: 30%;
+        margin-top: 50vh;
+        width: 50vh;
         margin-right: 5%;
+        transition: 1s;
 
         img {
             filter: brightness(0) saturate(100%) invert(11%) sepia(4%) saturate(9%) hue-rotate(342deg) brightness(102%) contrast(85%);
             width: 100%;
         }
+        &:hover{
+            filter: brightness(0) saturate(100%) invert(28%) sepia(2%) saturate(261%) hue-rotate(40deg) brightness(93%) contrast(90%);
+        }
     }
     
-    
+
     button {
         height: 100vh;
         border: 0;
