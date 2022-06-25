@@ -20,7 +20,7 @@ body {
 #main-text {
 
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
     margin-top: calc(10rem + 3vh);
     margin-right: auto;
@@ -30,10 +30,17 @@ body {
 
     img {
         z-index: -1;
-        width: calc(100px + 40vh);
         position: relative;
-        top: 10%;
+        width: calc(400px);
         filter: brightness(0) saturate(100%) invert(11%) sepia(4%) saturate(9%) hue-rotate(342deg) brightness(102%) contrast(85%);
+    }
+
+    .dots-1 {
+        bottom: 5%;
+    }
+
+    .dots-2 {
+        top: 5%;
     }
 
     h1 {

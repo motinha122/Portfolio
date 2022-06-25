@@ -1,60 +1,49 @@
 /* Mixins */
 /* Body */
 body {
-  font-family: 'Poppins', sans-serif;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  font-family: "Poppins", sans-serif;
+  justify-content: flex-end;
   background-color: #1D1D1D;
   overflow-x: hidden;
 }
 
 /* Hero */
 #main-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
   margin-top: calc(10rem + 3vh);
   margin-right: auto;
   margin-bottom: calc(3rem + 3vh);
   margin-left: calc(3rem + 3vh);
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-
 #main-text img {
   z-index: -1;
-  width: calc(100px + 40vh);
   position: relative;
-  top: 10%;
-  -webkit-filter: brightness(0) saturate(100%) invert(11%) sepia(4%) saturate(9%) hue-rotate(342deg) brightness(102%) contrast(85%);
-          filter: brightness(0) saturate(100%) invert(11%) sepia(4%) saturate(9%) hue-rotate(342deg) brightness(102%) contrast(85%);
+  width: 400px;
+  filter: brightness(0) saturate(100%) invert(11%) sepia(4%) saturate(9%) hue-rotate(342deg) brightness(102%) contrast(85%);
 }
-
+#main-text .dots-1 {
+  bottom: 5%;
+}
+#main-text .dots-2 {
+  top: 5%;
+}
 #main-text h1 {
   margin: 0;
   font-size: 4rem;
   color: #F2ECFF;
 }
-
 #main-text .name {
   text-shadow: 0 0 2px #fff;
   font-weight: bold;
   font-size: 6rem;
 }
-
 #main-text .intro {
   font-size: 2.5rem;
   margin-top: 2rem;
 }
-
 #main-text .intro span {
   text-shadow: 0 0 2px #a93e00;
   color: #a93e00;
@@ -62,37 +51,25 @@ body {
 
 /* Pages */
 main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   overflow-y: hidden;
   height: 100vh;
   /* Laptop */
 }
-
 main .pc {
   margin-top: 50vh;
   width: 50vh;
   margin-right: 5%;
-  -webkit-transition: 1s;
   transition: 1s;
 }
-
 main .pc img {
-  -webkit-filter: brightness(0) saturate(100%) invert(11%) sepia(4%) saturate(9%) hue-rotate(342deg) brightness(102%) contrast(85%);
-          filter: brightness(0) saturate(100%) invert(11%) sepia(4%) saturate(9%) hue-rotate(342deg) brightness(102%) contrast(85%);
+  filter: brightness(0) saturate(100%) invert(11%) sepia(4%) saturate(9%) hue-rotate(342deg) brightness(102%) contrast(85%);
   width: 100%;
 }
-
 main .pc:hover {
-  -webkit-filter: brightness(0) saturate(100%) invert(28%) sepia(2%) saturate(261%) hue-rotate(40deg) brightness(93%) contrast(90%);
-          filter: brightness(0) saturate(100%) invert(28%) sepia(2%) saturate(261%) hue-rotate(40deg) brightness(93%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(28%) sepia(2%) saturate(261%) hue-rotate(40deg) brightness(93%) contrast(90%);
 }
-
 main button {
   height: 100vh;
   border: 0;
@@ -100,28 +77,19 @@ main button {
   background-color: #1D1D1D;
   color: #F2ECFF;
   width: calc(1rem + 5vw);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 main button:hover {
   background-color: #484848;
   color: #F2ECFF;
   width: calc(1rem + 6vw);
 }
-
 main button span {
   font-size: 2.5rem;
   margin-top: 2rem;
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
   text-orientation: mixed;
-}
-/*# sourceMappingURL=sass.css.map */
+}/*# sourceMappingURL=sass.css.map */
