@@ -1,95 +1,61 @@
 /* Mixins */
 /* Body */
 body {
-  font-family: "Poppins", sans-serif;
-  justify-content: flex-end;
-  background-color: #1D1D1D;
-  overflow-x: hidden;
-}
-
-/* Hero */
-#main-text {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: calc(10rem + 3vh);
-  margin-right: auto;
-  margin-bottom: calc(3rem + 3vh);
-  margin-left: calc(3rem + 3vh);
-  transition: 0.4s;
-}
-#main-text img {
-  z-index: -1;
-  position: relative;
-  width: 400px;
-  filter: brightness(0) saturate(100%) invert(11%) sepia(4%) saturate(9%) hue-rotate(342deg) brightness(102%) contrast(85%);
-}
-#main-text .dots-1 {
-  bottom: 5%;
-}
-#main-text .dots-2 {
-  top: 5%;
-}
-#main-text h1 {
-  margin: 0;
-  font-size: 4rem;
-  color: #F2ECFF;
-}
-#main-text .name {
-  text-shadow: 0 0 2px #fff;
-  font-weight: bold;
-  font-size: 6rem;
-}
-#main-text .intro {
-  font-size: 2.5rem;
-  margin-top: 2rem;
-}
-#main-text .intro span {
-  text-shadow: 0 0 2px #a93e00;
-  color: #a93e00;
-}
-
-/* Pages */
-main {
   display: flex;
   flex-direction: row;
-  overflow-y: hidden;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
   height: 100vh;
-  /* Laptop */
 }
-main .pc {
-  margin-top: 50vh;
-  width: 50vh;
-  margin-right: 5%;
-  transition: 1s;
-}
-main .pc img {
-  filter: brightness(0) saturate(100%) invert(11%) sepia(4%) saturate(9%) hue-rotate(342deg) brightness(102%) contrast(85%);
-  width: 100%;
-}
-main .pc:hover {
-  filter: brightness(0) saturate(100%) invert(28%) sepia(2%) saturate(261%) hue-rotate(40deg) brightness(93%) contrast(90%);
-}
-main button {
-  height: 100vh;
-  border: 0;
-  border-left: 2px solid #a93e00;
-  background-color: #1D1D1D;
-  color: #F2ECFF;
-  width: calc(1rem + 5vw);
+
+.pattern {
   display: flex;
-  transition: 0.4s;
+  align-items: center;
   justify-content: center;
+  width: 50vw;
+  height: 100vh;
+  background-color: #1D1D1D;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-image: url(/images/patt2.png);
+  background-repeat: repeat;
+  background-size: 800px;
+  background-position: center;
+  filter: brightness(0.1);
+  transition: background-size 0.4s, filter 0.4s;
 }
-main button:hover {
-  background-color: #484848;
-  color: #F2ECFF;
-  width: calc(1rem + 6vw);
+.pattern:hover {
+  background-size: 820px !important;
+  filter: brightness(0.15) !important;
+  cursor: pointer;
 }
-main button span {
-  font-size: 2.5rem;
-  margin-top: 2rem;
-  -ms-writing-mode: tb-rl;
-      writing-mode: vertical-rl;
-  text-orientation: mixed;
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: transform 0.1s;
+}
+main h1, main h2, main h3 {
+  font-weight: bold;
+  margin: 0;
+  margin-left: 2rem;
+  width: 30rem;
+}
+main h1 {
+  font-size: 5rem;
+  color: #1D1D1D;
+}
+main h2 {
+  font-size: 3rem;
+}
+main h3 {
+  font-size: 32px;
+}
+main .span-1 {
+  text-shadow: 0 0 2px #a93e00;
+  color: #a93e00;
 }/*# sourceMappingURL=sass.css.map */

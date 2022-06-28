@@ -1,10 +1,12 @@
-let $ = (w) => document.querySelector(w);
-let print = (p) => console.log(p);
+const $ = (w) => document.querySelector(w);
+const print = (...p) => console.log(...p);
+const text = $("main");
 
-function hoverButtons(){
-    $("#main-text").style.marginLeft = "calc(3.5rem + 3vh)";
-}
+document.addEventListener("mousemove", (e) =>{
+    
+    const percent = 1 - (e.clientX / window.innerWidth) - 0.5;
+    const translate = percent*15;
+    print(percent,translate);
+    text.style.transform = `translateX(${translate}px)`;
+})
 
-function hoverButtonsRevert(){
-    $("#main-text").style.marginLeft = "calc(3rem + 3vh)";
-}
