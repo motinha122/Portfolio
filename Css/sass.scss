@@ -16,41 +16,52 @@ body {
     height: 100vh;
 }
 
-.pattern {
+.laptop {
     @include center-div();
     width: 50vw;
     height: 100vh;
-    background-color: #1D1D1D;
     overflow-y: hidden;
     overflow-x: hidden;
-    background-image: url(/images/patt2.png);
-    background-repeat: repeat;
-    background-size: 800px;
-    background-position: center;
-    filter: brightness(0.1);
-    transition: background-size 0.4s, filter 0.4s;
 
-    img {
+    svg {
+        min-width: 50%;
+        max-width: 70%;
     }
 
-    &:hover{
-        background-size: 820px !important;
-        filter: brightness(0.15) !important;
-        cursor: pointer;
+    .pattern {
+        z-index: -10;
+        position: absolute;
+        width: 50vw;
+        height: 100vh;
+        background-image: url(/images/patt2.png);
+        background-repeat: repeat;
+        background-size: 800px;
+        background-position: center;
+        filter: brightness(0.1);
+        transition: background-size 0.4s, filter 0.4s;
+        background-color: #1D1D1D;
+
+        &:hover {
+            background-size: 820px !important;
+            filter: brightness(0.15) !important;
+            cursor: pointer;
+        }
     }
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: fit-content;
     transition: transform 0.1s;
 
-    h1,h2,h3{
+    h1,
+    h2,
+    h3 {
         font-weight: bold;
         margin: 0;
-        margin-left:2rem;
+        margin-left: 2rem;
         width: 30rem;
     }
 
