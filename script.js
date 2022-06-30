@@ -4,10 +4,36 @@ const print = (...p) => console.log(...p);
 const pattern = $(".pattern");
 const text = $("main");
 
+const linesQuantity = window.innerHeight / 44
+const numberLines = Math.round(linesQuantity)
+
+for(let i = 0; i <=numberLines ; i++){
+    const line = document.createElement('img');
+    line.alt = "pattern"
+    if(i % 2 == 0){
+        line.classList.add("even");
+        line.src = "./images/pattline.png";
+    }else{
+        line.src = "./images/pattline2.png";
+    }
+    $(".pattern").appendChild(line);
+}
+
+const lineClass = document.querySelectorAll(".pattern img")
+
 document.addEventListener("mousemove", (e) =>{
-    
+
     const percent = 1 - (e.clientX / window.innerWidth) - 0.5;
-    const translate = percent*15;
+    const translate = percent * 15;
+    
+    lineClass.forEach(line => {
+        if (line.classList.contains("even")){
+            line.style.transform = `translateX(${percent * 3}px)`;
+        } else {
+            line.style.transform = `translateX(${-percent * 3}px)`;
+        }
+    });
+
     text.style.transform = `translateX(${translate}px)`;
 })
 

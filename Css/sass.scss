@@ -22,30 +22,24 @@ body {
     height: 100vh;
     overflow-y: hidden;
     overflow-x: hidden;
+    flex-direction: column;
 
     svg {
+        display: none;
         min-width: 50%;
         max-width: 70%;
     }
 
     .pattern {
-        z-index: -10;
         position: absolute;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        z-index: -10;
         width: 50vw;
         height: 100vh;
-        background-image: url(/images/patt2.png);
-        background-repeat: repeat;
-        background-size: 800px;
-        background-position: center;
         filter: brightness(0.1);
-        transition: background-size 0.4s, filter 0.4s;
+        transition: 0.4s;
         background-color: #1D1D1D;
-
-        &:hover {
-            background-size: 820px !important;
-            filter: brightness(0.15) !important;
-            cursor: pointer;
-        }
     }
 }
 
@@ -56,9 +50,7 @@ main {
     width: fit-content;
     transition: transform 0.1s;
 
-    h1,
-    h2,
-    h3 {
+    h1,h2,h3 {
         font-weight: bold;
         margin: 0;
         margin-left: 2rem;
@@ -83,4 +75,8 @@ main {
         color: #a93e00;
     }
 
+}
+
+.even {
+    margin: 5px 0 5px 0;
 }
