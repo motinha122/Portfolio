@@ -24,12 +24,6 @@ body {
     overflow-x: hidden;
     flex-direction: column;
 
-    svg {
-        display: none;
-        min-width: 50%;
-        max-width: 70%;
-    }
-
     .pattern {
         position: absolute;
         overflow-x: hidden;
