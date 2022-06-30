@@ -28,9 +28,9 @@ document.addEventListener("mousemove", (e) =>{
     
     lineClass.forEach(line => {
         if (line.classList.contains("even")){
-            line.style.transform = `translateX(${percent * 3}px)`;
+            line.style.transform = `translateX(${percent * 4}px)`;
         } else {
-            line.style.transform = `translateX(${-percent * 3}px)`;
+            line.style.transform = `translateX(${-percent * 4}px)`;
         }
     });
 

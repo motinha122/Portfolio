@@ -53,7 +53,7 @@ main {
 
     h1 {
         font-size: 5rem;
-        color: #1D1D1D;
+        text-shadow: 0 0 2px #1D1D1D;
     }
 
     h2 {
@@ -64,9 +64,9 @@ main {
         font-size: 32px;
     }
 
-    .span-1 {
-        text-shadow: 0 0 2px #a93e00;
-        color: #a93e00;
+    span{
+        text-shadow: 0 0 2px #df5200;
+        color: #df5200;
     }
 
 }
