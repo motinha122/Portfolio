@@ -1,9 +1,6 @@
 const $ = (w) => document.querySelector(w);
 const print = (...p) => console.log(...p);
 
-const pattern = $(".pattern");
-const text = $("main");
-
 const linesQuantity = window.innerHeight / 44
 const numberLines = Math.round(linesQuantity)
 
@@ -34,6 +31,6 @@ document.addEventListener("mousemove", (e) =>{
         }
     });
 
-    text.style.transform = `translateX(${translate}px)`;
+    $("main").style.transform = `translateX(${translate}px)`;
 })
 

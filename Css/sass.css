@@ -37,13 +37,12 @@ main {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  margin-left: 1rem;
   transition: transform 0.1s;
 }
 main h1, main h2, main h3 {
   font-weight: bold;
-  margin: 0;
-  margin-left: 2rem;
-  width: 30rem;
+  width: 28rem;
 }
 main h1 {
   font-size: 5rem;
@@ -54,6 +53,18 @@ main h2 {
 }
 main h3 {
   font-size: 32px;
+}
+main::before {
+  font-family: "Josefin sans";
+  opacity: 0.3;
+  font-size: 2rem;
+  content: "<html>";
+}
+main::after {
+  font-family: "Josefin sans";
+  opacity: 0.3;
+  font-size: 2rem;
+  content: "</html>";
 }
 main span {
   text-shadow: 0 0 2px #df5200;
