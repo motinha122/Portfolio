@@ -26,11 +26,12 @@ body {
   width: 50vw;
   height: 100vh;
   filter: brightness(0.1);
-  transition: 0.4s;
+  transition: 1s;
   background-color: #1D1D1D;
 }
 
 main {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,38 +40,84 @@ main {
   width: fit-content;
   margin-left: 1rem;
   transition: transform 0.1s;
+  /*  span {
+       text-shadow: 0 0 2px #df5200;
+       color: #df5200;
+   } */
 }
 main h1, main h2, main h3 {
-  font-weight: bold;
+  font-weight: 600;
+  margin: 0 0 0 1rem;
   width: 28rem;
 }
 main h1 {
+  font-family: "Poppins";
   font-size: 5rem;
   text-shadow: 0 0 2px #1D1D1D;
+  -webkit-animation: fadein 0.8s;
+          animation: fadein 0.8s;
 }
 main h2 {
   font-size: 3rem;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
 }
 main h3 {
   font-size: 32px;
+  -webkit-animation: fadein 1s;
+          animation: fadein 1s;
 }
 main::before {
   font-family: "Josefin sans";
   opacity: 0.3;
   font-size: 2rem;
   content: "<html>";
+  -webkit-animation: fadein2 0.5s;
+          animation: fadein2 0.5s;
 }
 main::after {
   font-family: "Josefin sans";
   opacity: 0.3;
   font-size: 2rem;
   content: "</html>";
-}
-main span {
-  text-shadow: 0 0 2px #df5200;
-  color: #df5200;
+  -webkit-animation: fadein2 0.5s;
+          animation: fadein2 0.5s;
 }
 
 .even {
   margin: 5px 0 5px 0;
+}
+
+/* Animations */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+@keyframes fadein2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
 }/*# sourceMappingURL=sass.css.map */
