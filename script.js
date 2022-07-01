@@ -21,7 +21,7 @@ const lineClass = document.querySelectorAll(".pattern img")
 document.addEventListener("mousemove", (e) =>{
 
     const percent = 1 - (e.clientX / window.innerWidth) - 0.5;
-    const translate = percent * 15;
+    const translate = percent * 10;
     
     lineClass.forEach(line => {
         if (line.classList.contains("even")){
@@ -32,5 +32,11 @@ document.addEventListener("mousemove", (e) =>{
     });
 
     $("main").style.transform = `translateX(${translate}px)`;
+    $("h1").style.transform = `translateX(${percent * 6}px)`;
+    $("h2").style.transform = `translateX(${percent * 6}px)`;
+    $("h3").style.transform = `translateX(${percent * 6}px)`;
 })
 
+window.onload = () => {
+    
+}
