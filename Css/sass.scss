@@ -12,13 +12,14 @@ body {
     display: flex;
     flex-direction: row;
     font-family: 'Poppins', sans-serif;
-    background-color: #ffffff;
+    background: rgb(150,140,135);
+background: linear-gradient(0deg, rgba(150,140,135,1) 0%, rgba(201,192,174,1) 100%);
     height: 100vh;
 }
 
 .laptop {
     @include center-div();
-    width: 50vw;
+    width: 70vw;
     height: 100vh;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -29,7 +30,7 @@ body {
         overflow-x: hidden;
         overflow-y: hidden;
         z-index: -10;
-        width: 50vw;
+        width: inherit;
         height: 100vh;
         filter: brightness(0.1);
         transition: 1s;
@@ -46,16 +47,23 @@ main {
     margin-left: 1rem;
     transition: transform 0.1s;
 
-    h1,h2,h3 {
+    h1,
+    h2,
+    h3 {
+        color: #ffffff;
         font-weight: 600;
         margin: 0 0 0 1rem;
         width: 28rem;
+        text-shadow:
+            #ffffff74 0px 3px 3px,
+            0 2px 0 #a6a6a6d3,
+            0 3px 0 #939393c6,
+            0 4px 0 #838383b9,
+            0 5px 0 #767676b2;
     }
 
     h1 {
-        font-family:'Poppins';
         font-size: 5rem;
-        text-shadow: 0 0 2px #1D1D1D;
         animation: fadein 0.8s;
     }
 
@@ -68,24 +76,24 @@ main {
         font-size: 32px;
         animation: fadein 1s;
     }
-    
+
     &::before {
         font-family: 'Josefin sans';
-        opacity: 0.3;
+        opacity: 0.4;
         font-size: 2rem;
         content: "<html>";
         animation: fadein2 0.5s;
     }
-    
+
     &::after {
         font-family: 'Josefin sans';
-        opacity: 0.3;
+        opacity: 0.4;
         font-size: 2rem;
         content: "</html>";
         animation: fadein2 0.5s;
     }
-    
-   /*  span {
+
+    /*  span {
         text-shadow: 0 0 2px #df5200;
         color: #df5200;
     } */
@@ -98,11 +106,21 @@ main {
 /* Animations */
 
 @keyframes fadein {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadein2 {
-    from {opacity: 0;}
-    to {opacity: 0.3;}
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.3;
+    }
 }

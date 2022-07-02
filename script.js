@@ -36,7 +36,3 @@ document.addEventListener("mousemove", (e) =>{
     $("h2").style.transform = `translateX(${percent * 6}px)`;
     $("h3").style.transform = `translateX(${percent * 6}px)`;
 })
-
-window.onload = () => {
-    
-}
