@@ -9,28 +9,30 @@
 /* Body */
 
 body {
+    overflow-x: hidden;
     display: flex;
     flex-direction: row;
     font-family: 'Poppins', sans-serif;
-    background: rgb(150,140,135);
-background: linear-gradient(0deg, rgba(150,140,135,1) 0%, rgba(201,192,174,1) 100%);
     height: 100vh;
+    background: #36D1DC;
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);
+    background: linear-gradient(to top, #5B86E5, #36D1DC);
+
 }
 
 .laptop {
     @include center-div();
-    width: 70vw;
+    width: 70%;
     height: 100vh;
     overflow-y: hidden;
     overflow-x: hidden;
     flex-direction: column;
 
     .pattern {
-        position: absolute;
         overflow-x: hidden;
         overflow-y: hidden;
         z-index: -10;
-        width: inherit;
+        width: 100%;
         height: 100vh;
         filter: brightness(0.1);
         transition: 1s;
@@ -39,12 +41,11 @@ background: linear-gradient(0deg, rgba(150,140,135,1) 0%, rgba(201,192,174,1) 10
 }
 
 main {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: fit-content;
-    margin-left: 1rem;
+    margin: 0 1rem 0 1rem;
     transition: transform 0.1s;
 
     h1,
@@ -53,13 +54,8 @@ main {
         color: #ffffff;
         font-weight: 600;
         margin: 0 0 0 1rem;
-        width: 28rem;
-        text-shadow:
-            #ffffff74 0px 3px 3px,
-            0 2px 0 #a6a6a6d3,
-            0 3px 0 #939393c6,
-            0 4px 0 #838383b9,
-            0 5px 0 #767676b2;
+        width: 100%;
+        text-shadow:#ffffffaf 0 0px 2px;
     }
 
     h1 {
@@ -92,11 +88,6 @@ main {
         content: "</html>";
         animation: fadein2 0.5s;
     }
-
-    /*  span {
-        text-shadow: 0 0 2px #df5200;
-        color: #df5200;
-    } */
 }
 
 .even {
