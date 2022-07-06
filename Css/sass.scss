@@ -45,40 +45,43 @@ main {
         &::after {
             content: "</html>";
         }
-        h1,h2,h3 {
+
+        .intro,.name,.role {
             color: #f6f6f6;
             margin: 0 0 0 1rem;
             width: 100%;
-            
         }
     
-        h2 {
+        .intro {
             font-size: 3rem;
             animation: fadein 1.2s;
         }
         
-        h1 {
+        .name {
             font-weight: 600;
             font-size: 5rem;
             animation: fadein 1.8s;
             margin-bottom:10px ;
         }
     
-        h3 {
+        .role {
             margin-bottom: 10px;
             font-size: 32px;
             animation: fadein 1.6s;
     
             span{
                 transition: 0.4s;
+                color: #df5200;
+                text-shadow: #df5200 0 0 2px;
             }
         }
     }
 
     &:hover{
-        span{
-            color: #df5200;
-            text-shadow: #df5200 0 0 2px;
+        .pattern{
+            img{
+                filter: brightness(0.7);
+            }
         }
     }
 
@@ -91,7 +94,7 @@ main {
         height: auto;
 
         img {
-            
+            transition: 1s;
             width: 90%;
             filter: brightness(0.4);
         }

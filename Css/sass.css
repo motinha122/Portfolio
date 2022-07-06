@@ -41,35 +41,36 @@ main .text::before, main .text::after {
 main .text::after {
   content: "</html>";
 }
-main .text h1, main .text h2, main .text h3 {
+main .text .intro, main .text .name, main .text .role {
   color: #f6f6f6;
   margin: 0 0 0 1rem;
   width: 100%;
 }
-main .text h2 {
+main .text .intro {
   font-size: 3rem;
   -webkit-animation: fadein 1.2s;
           animation: fadein 1.2s;
 }
-main .text h1 {
+main .text .name {
   font-weight: 600;
   font-size: 5rem;
   -webkit-animation: fadein 1.8s;
           animation: fadein 1.8s;
   margin-bottom: 10px;
 }
-main .text h3 {
+main .text .role {
   margin-bottom: 10px;
   font-size: 32px;
   -webkit-animation: fadein 1.6s;
           animation: fadein 1.6s;
 }
-main .text h3 span {
+main .text .role span {
   transition: 0.4s;
-}
-main:hover span {
   color: #df5200;
   text-shadow: #df5200 0 0 2px;
+}
+main:hover .pattern img {
+  filter: brightness(0.7);
 }
 main .pattern {
   overflow: hidden;
@@ -82,6 +83,7 @@ main .pattern {
   height: auto;
 }
 main .pattern img {
+  transition: 1s;
   width: 90%;
   filter: brightness(0.4);
 }
