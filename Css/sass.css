@@ -3,19 +3,12 @@
 body {
   overflow-x: hidden;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
   font-family: "Poppins", sans-serif;
   height: 100vh;
-  background-color: #000000;
-}
-
-.laptop {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 70%;
-  height: 100vh;
-  flex-direction: column;
+  background-color: #1c1c1c;
 }
 
 main {
@@ -24,9 +17,10 @@ main {
   justify-content: center;
   flex-direction: column;
   transition: transform 0.1s;
+  height: 100vh;
 }
 main .text {
-  margin: 3rem auto 3rem 1rem;
+  margin: 4rem auto 4rem 1rem;
   transition: transform 0.1s;
 }
 main .text::before, main .text::after {
@@ -69,9 +63,6 @@ main .text .role span {
   color: #df5200;
   text-shadow: #df5200 0 0 2px;
 }
-main:hover .pattern img {
-  filter: brightness(0.7);
-}
 main .pattern {
   overflow: hidden;
   display: flex;
@@ -84,12 +75,38 @@ main .pattern {
 }
 main .pattern img {
   transition: 1s;
-  width: 90%;
-  filter: brightness(0.4);
+  width: 100%;
+  filter: brightness(0.7);
+}
+main:hover .pattern img {
+  filter: brightness(1.2);
 }
 
-.even {
-  margin: 5px 0 5px 0;
+/* PC Spline */
+.laptop {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  width: 60%;
+  height: 100vh;
+  background-image: url(/images/Background.png);
+}
+.laptop iframe {
+  width: 90%;
+  height: 80%;
+}
+.laptop .spline-text {
+  height: 80%;
+  display: flex;
+  margin-right: 0;
+  align-items: flex-end;
+  position: absolute;
+}
+.laptop .spline-text h3 {
+  color: #1c1c1c;
+  background-color: #1c1c1c;
+  font-size: 2rem;
+  margin-bottom: 13px;
 }
 
 /* Animations */

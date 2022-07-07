@@ -10,27 +10,21 @@
 
 body {
     overflow-x: hidden;
-    display: flex;
+    @include center-div();
     flex-direction: row;
     font-family: 'Poppins', sans-serif;
     height: 100vh;
-    background-color: #000000;
-}
-
-.laptop {
-    @include center-div();
-    width: 70%;
-    height: 100vh;
-    flex-direction: column;
+    background-color: #1c1c1c;
 }
 
 main {
     @include center-div();
     flex-direction: column;
     transition: transform 0.1s;
+    height: 100vh;
 
     .text{
-        margin: 3rem auto 3rem 1rem;
+        margin: 4rem auto 4rem 1rem;
         transition: transform 0.1s;
 
         &::before , &::after {
@@ -76,15 +70,7 @@ main {
             }
         }
     }
-
-    &:hover{
-        .pattern{
-            img{
-                filter: brightness(0.7);
-            }
-        }
-    }
-
+    
     .pattern {
         overflow: hidden;
         @include center-div();
@@ -92,18 +78,54 @@ main {
         width:20rem;
         transition: 1s;
         height: auto;
-
+        
         img {
             transition: 1s;
-            width: 90%;
-            filter: brightness(0.4);
+            width: 100%;
+            filter: brightness(0.7);
+        }
+    }
+
+    &:hover{
+        .pattern{
+            img{
+                filter: brightness(1.2);
+            }
         }
     }
 }
 
-.even {
-    margin: 5px 0 5px 0;
+/* PC Spline */
+
+.laptop {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 60%;
+    height: 100vh;
+    background-image: url(/images/Background.png);
+    
+    iframe {
+        width: 90%;
+        height: 80%;
+    }
+
+    .spline-text{
+        height: 80%;
+        display: flex;
+        margin-right:0;
+        align-items: flex-end;
+        position: absolute;
+
+        h3{
+            color: #1c1c1c;
+            background-color: #1c1c1c;
+            font-size: 2rem;
+            margin-bottom: 13px;
+        }
+    }
 }
+
 
 /* Animations */
 
