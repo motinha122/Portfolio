@@ -1,14 +1,23 @@
 /* Mixins */
 /* Body */
+.mobile-header, .mobile-footer {
+  display: none;
+}
+
 body {
   overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  background-color: #000000;
+  background-image: url(/images/Background.png);
+  background-position: center;
+}
+
+.first {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-  font-family: "Poppins", sans-serif;
-  height: 100vh;
-  background-color: #1c1c1c;
+  -webkit-backdrop-filter: brightness(0.5);
+          backdrop-filter: brightness(0.5);
 }
 
 main {
@@ -18,6 +27,20 @@ main {
   flex-direction: column;
   transition: transform 0.1s;
   height: 100vh;
+  margin: auto;
+}
+main .bar-1,
+main .bar-2 {
+  width: 95%;
+  height: 1rem;
+  background-color: #f57e0e;
+  box-shadow: #f57e0e 0 0 6px;
+}
+main .bar-1 {
+  margin-top: 2rem;
+}
+main .bar-2 {
+  margin-bottom: 2rem;
 }
 main .text {
   margin: 4rem auto 4rem 1rem;
@@ -35,33 +58,35 @@ main .text::before, main .text::after {
 main .text::after {
   content: "</html>";
 }
-main .text .intro, main .text .name, main .text .role {
+main .text .intro,
+main .text .name,
+main .text .role {
   color: #f6f6f6;
   margin: 0 0 0 1rem;
   width: 100%;
 }
 main .text .intro {
   font-size: 3rem;
-  -webkit-animation: fadein 1.2s;
-          animation: fadein 1.2s;
+  -webkit-animation: fadein 2.2s;
+          animation: fadein 2.2s;
 }
 main .text .name {
   font-weight: 600;
-  font-size: 5rem;
-  -webkit-animation: fadein 1.8s;
-          animation: fadein 1.8s;
+  font-size: 4.5rem;
+  -webkit-animation: fadein 2.8s;
+          animation: fadein 2.8s;
   margin-bottom: 10px;
 }
 main .text .role {
   margin-bottom: 10px;
   font-size: 32px;
-  -webkit-animation: fadein 1.6s;
-          animation: fadein 1.6s;
+  -webkit-animation: fadein 2.6s;
+          animation: fadein 2.6s;
 }
 main .text .role span {
   transition: 0.4s;
-  color: #df5200;
-  text-shadow: #df5200 0 0 2px;
+  color: #f57e0e;
+  text-shadow: #f57e0e 0 0 2px;
 }
 main .pattern {
   overflow: hidden;
@@ -86,27 +111,12 @@ main:hover .pattern img {
 .laptop {
   display: flex;
   align-items: center;
-  flex-direction: row-reverse;
-  width: 60%;
+  width: 60vw;
   height: 100vh;
-  background-image: url(/images/Background.png);
 }
 .laptop iframe {
-  width: 90%;
-  height: 80%;
-}
-.laptop .spline-text {
-  height: 80%;
-  display: flex;
-  margin-right: 0;
-  align-items: flex-end;
-  position: absolute;
-}
-.laptop .spline-text h3 {
-  color: #1c1c1c;
-  background-color: #1c1c1c;
-  font-size: 2rem;
-  margin-bottom: 13px;
+  width: 60vw;
+  height: 100%;
 }
 
 /* Animations */
@@ -140,5 +150,57 @@ main:hover .pattern img {
   }
   to {
     opacity: 0.3;
+  }
+}
+/* Media Query */
+@media screen and (max-width: 1160px) {
+  main .text {
+    margin: 4rem auto 4rem auto;
+    align-items: center;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
+
+  .laptop {
+    height: 68vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  .mobile-header, .mobile-footer {
+    display: flex;
+    font-family: "Josefin sans";
+    color: #f6f6f6;
+    font-size: 4rem;
+    font-weight: bold;
+    position: relative;
+    margin-top: 5%;
+  }
+
+  .mobile-footer {
+    font-size: 2rem;
+  }
+
+  .first {
+    flex-direction: column;
+  }
+  .first main {
+    justify-content: flex-start;
+  }
+  .first main .pattern {
+    display: none;
+  }
+  .first main .text {
+    width: 60vw;
+    margin: 2rem 0 2rem 0;
+  }
+  .first main .text .intro,
+.first main .text .name,
+.first main .text .role {
+    text-align: center;
+    margin: 0;
+  }
+  .first main .text::before, .first main .text::after {
+    display: none;
   }
 }/*# sourceMappingURL=sass.css.map */
