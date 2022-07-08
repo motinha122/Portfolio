@@ -15,7 +15,7 @@
 body {
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
-    background-color: #000000;
+    background-color: #1d1d1d;
     background-image: url(/images/Background.png);
     background-position: center;
 }
@@ -161,6 +161,7 @@ main {
 @media screen and (max-width: 1160px) {
 
     main{
+        
         .text{
             margin: 4rem auto 4rem auto;
             align-items: center;
@@ -178,6 +179,7 @@ main {
 @media screen and (max-width: 900px) {
 
     .mobile-header ,.mobile-footer{
+        text-align: center;
         display: flex;
         font-family: 'Josefin sans';
         color: #f6f6f6;
@@ -196,8 +198,10 @@ main {
         flex-direction: column;
 
         main {
-
+            height: min-content;
             justify-content: flex-start;
+            margin: 0;
+            width: 80vw;
 
             .pattern {
                 display: none;
