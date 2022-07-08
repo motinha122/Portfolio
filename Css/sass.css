@@ -1,6 +1,9 @@
 /* Mixins */
 /* Body */
-.mobile-header, .mobile-footer {
+.mobile-header,
+.mobile-footer,
+.pattern-3,
+.pattern-4 {
   display: none;
 }
 
@@ -9,7 +12,8 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #1d1d1d;
   background-image: url(/images/Background.png);
-  background-position: center;
+  background-position: right;
+  background-repeat: no-repeat;
 }
 
 .first {
@@ -33,7 +37,7 @@ main .bar-1,
 main .bar-2 {
   width: 95%;
   height: 1rem;
-  background-color: #f57e0e;
+  background-color: rgb(245, 126, 14);
   box-shadow: #f57e0e 0 0 6px;
 }
 main .bar-1 {
@@ -167,18 +171,19 @@ main:hover .pattern img {
   }
 }
 @media screen and (max-width: 900px) {
-  .mobile-header, .mobile-footer {
+  .mobile-header,
+.mobile-footer {
     text-align: center;
     display: flex;
     font-family: "Josefin sans";
     color: #f6f6f6;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
-    position: relative;
     margin-top: 5%;
   }
 
   .mobile-footer {
+    margin-top: 2rem;
     font-size: 2rem;
   }
 
@@ -193,8 +198,28 @@ main:hover .pattern img {
     margin: 0;
     width: 80vw;
   }
+  .first main .bar-1,
+.first main .bar-2 {
+    margin: 0;
+  }
   .first main .pattern {
     display: none;
+  }
+  .first main .pattern-3,
+.first main .pattern-4 {
+    display: block;
+    position: absolute;
+    z-index: -2;
+    filter: grayscale(1) brightness(0.15);
+  }
+  .first main .pattern-3 {
+    margin-top: 8rem;
+    right: 80vw;
+  }
+  .first main .pattern-4 {
+    left: 80vw;
+    bottom: 40rem;
+    transform: scaleX(-1);
   }
   .first main .text {
     width: 60vw;
@@ -205,6 +230,7 @@ main:hover .pattern img {
 .first main .text .role {
     text-align: center;
     margin: 0;
+    font-size: 2.5rem;
   }
   .first main .text::before, .first main .text::after {
     display: none;

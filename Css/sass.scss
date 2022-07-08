@@ -8,7 +8,10 @@
 
 /* Body */
 
-.mobile-header,.mobile-footer {
+.mobile-header,
+.mobile-footer,
+.pattern-3,
+.pattern-4 {
     display: none;
 }
 
@@ -17,7 +20,8 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #1d1d1d;
     background-image: url(/images/Background.png);
-    background-position: center;
+    background-position: right;
+    background-repeat: no-repeat;
 }
 
 .first {
@@ -36,12 +40,17 @@ main {
     .bar-2 {
         width: 95%;
         height: 1rem;
-        background-color: #f57e0e;
+        background-color: rgb(245, 126, 14);
         box-shadow: #f57e0e 0 0 6px;
     }
 
-    .bar-1{margin-top: 2rem;}
-    .bar-2{margin-bottom: 2rem;}
+    .bar-1 {
+        margin-top: 2rem;
+    }
+
+    .bar-2 {
+        margin-bottom: 2rem;
+    }
 
     .text {
         margin: 4rem auto 4rem 1rem;
@@ -88,8 +97,8 @@ main {
 
             span {
                 transition: 0.4s;
-                color:  #f57e0e;
-                text-shadow:  #f57e0e 0 0 2px;
+                color: #f57e0e;
+                text-shadow: #f57e0e 0 0 2px;
             }
         }
     }
@@ -160,9 +169,9 @@ main {
 
 @media screen and (max-width: 1160px) {
 
-    main{
-        
-        .text{
+    main {
+
+        .text {
             margin: 4rem auto 4rem auto;
             align-items: center;
             width: min-content;
@@ -178,18 +187,20 @@ main {
 
 @media screen and (max-width: 900px) {
 
-    .mobile-header ,.mobile-footer{
+    .mobile-header,
+    .mobile-footer {
         text-align: center;
         display: flex;
         font-family: 'Josefin sans';
         color: #f6f6f6;
-        font-size: 4rem;
+        font-size: 3rem;
         font-weight: bold;
-        position: relative;
+
         margin-top: 5%;
     }
 
-    .mobile-footer{
+    .mobile-footer {
+        margin-top: 2rem;
         font-size: 2rem;
     }
 
@@ -198,6 +209,12 @@ main {
         flex-direction: column;
 
         main {
+
+            .bar-1,
+            .bar-2 {
+                margin: 0;
+            }
+
             height: min-content;
             justify-content: flex-start;
             margin: 0;
@@ -205,6 +222,25 @@ main {
 
             .pattern {
                 display: none;
+            }
+
+            .pattern-3,
+            .pattern-4 {
+                display: block;
+                position: absolute;
+                z-index: -2;
+                filter:grayscale(1) brightness(0.15);
+            }
+
+            .pattern-3{
+                margin-top: 8rem;
+                right: 80vw;
+            }
+
+            .pattern-4{
+                left: 80vw;
+                bottom: 40rem;
+                transform: scaleX(-1);
             }
 
             .text {
@@ -216,6 +252,7 @@ main {
                 .role {
                     text-align: center;
                     margin: 0;
+                    font-size: 2.5rem;
                 }
 
                 &::before,
