@@ -165,9 +165,6 @@ main:hover .pattern img {
   main .text {
     margin: 4rem auto 4rem auto;
     align-items: center;
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
   }
   .laptop {
     height: 68vw;
