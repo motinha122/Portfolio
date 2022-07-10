@@ -9,24 +9,26 @@
 /* Body */
 
 .mobile-header,
-.mobile-footer,
-.pattern-3,
-.pattern-4 {
+.mobile-footer {
     display: none;
 }
 
 body {
-    overflow-x: hidden;
+    @include center-div();
     font-family: 'Poppins', sans-serif;
-    background-color: #1d1d1d;
+    background-color: #1a1a1a;
     background-image: url(/images/Background.png);
     background-position: right;
+    background-size: contain;
     background-repeat: no-repeat;
+    overflow-x: hidden;
 }
 
 .first {
-    @include center-div();
+    width: 100%;
     backdrop-filter: brightness(0.5);
+    @include center-div();
+    height: 100%;
 }
 
 main {
@@ -142,7 +144,6 @@ main {
     }
 }
 
-
 /* Animations */
 
 @keyframes fadein {
@@ -183,12 +184,12 @@ main {
     }
 }
 
-
-
 @media screen and (max-width: 900px) {
-    
-    body{
-        background-position: center;
+
+    body {
+        background-image: none;
+        background-color: #1a1a1a;
+        height: 100vh;
     }
 
     .mobile-header,
@@ -199,7 +200,6 @@ main {
         color: #f6f6f6;
         font-size: 3rem;
         font-weight: bold;
-
         margin-top: 5%;
     }
 
@@ -209,7 +209,6 @@ main {
     }
 
     .first {
-
         flex-direction: column;
 
         main {
@@ -226,25 +225,6 @@ main {
 
             .pattern {
                 display: none;
-            }
-
-            .pattern-3,
-            .pattern-4 {
-                display: block;
-                position: absolute;
-                z-index: -2;
-                filter:grayscale(1) brightness(0.15);
-            }
-
-            .pattern-3{
-                margin-top: 8rem;
-                right: 80vw;
-            }
-
-            .pattern-4{
-                left: 80vw;
-                bottom: 40rem;
-                transform: scaleX(-1);
             }
 
             .text {
