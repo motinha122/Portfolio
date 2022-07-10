@@ -198,7 +198,7 @@ main {
         display: flex;
         font-family: 'Josefin sans';
         color: #f6f6f6;
-        font-size: 3rem;
+        font-size: 2.8rem;
         font-weight: bold;
         margin-top: 5%;
     }
@@ -228,8 +228,8 @@ main {
             }
 
             .text {
-                width: 60vw;
                 margin: 2rem 0 2rem 0;
+                width: 100%;
 
                 .intro,
                 .name,

@@ -169,7 +169,6 @@ main:hover .pattern img {
     width: -moz-min-content;
     width: min-content;
   }
-
   .laptop {
     height: 68vw;
   }
@@ -180,23 +179,20 @@ main:hover .pattern img {
     background-color: #1a1a1a;
     height: 100vh;
   }
-
   .mobile-header,
 .mobile-footer {
     text-align: center;
     display: flex;
     font-family: "Josefin sans";
     color: #f6f6f6;
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: bold;
     margin-top: 5%;
   }
-
   .mobile-footer {
     margin-top: 2rem;
     font-size: 2rem;
   }
-
   .first {
     flex-direction: column;
   }
@@ -216,8 +212,8 @@ main:hover .pattern img {
     display: none;
   }
   .first main .text {
-    width: 60vw;
     margin: 2rem 0 2rem 0;
+    width: 100%;
   }
   .first main .text .intro,
 .first main .text .name,
