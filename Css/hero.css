@@ -1,7 +1,6 @@
 /* Mixins */
 /* Body */
-.mobile-header,
-.mobile-footer {
+.mobile-header {
   display: none;
 }
 
@@ -114,6 +113,18 @@ main .pattern img {
 main:hover .pattern img {
   filter: brightness(1.2);
 }
+main .mobile-footer {
+  position: absolute;
+  -webkit-backdrop-filter: brightness(0.1);
+          backdrop-filter: brightness(0.1);
+  top: 80%;
+  text-align: center;
+  line-height: 2rem;
+  font-family: "Josefin sans";
+  color: #f6f6f6;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
 
 /* PC Spline */
 .laptop {
@@ -178,6 +189,9 @@ main:hover .pattern img {
   }
   .mobile-header,
 .mobile-footer {
+    position: relative !important;
+    top: 0 !important;
+    background-color: transparent !important;
     text-align: center;
     display: flex;
     font-family: "Josefin sans";
@@ -185,10 +199,6 @@ main:hover .pattern img {
     font-size: 2.8rem;
     font-weight: bold;
     margin-top: 5%;
-  }
-  .mobile-footer {
-    margin-top: 2rem;
-    font-size: 2rem;
   }
   .first {
     flex-direction: column;
@@ -222,4 +232,4 @@ main:hover .pattern img {
   .first main .text::before, .first main .text::after {
     display: none;
   }
-}/*# sourceMappingURL=sass.css.map */
+}/*# sourceMappingURL=hero.css.map */
