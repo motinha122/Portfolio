@@ -34,8 +34,7 @@ main {
   height: 100vh;
   margin: auto;
 }
-main .bar-1,
-main .bar-2 {
+main .bar-1, main .bar-2 {
   width: 95%;
   height: 1rem;
   background-color: rgb(245, 126, 14);
@@ -63,17 +62,15 @@ main .text::before, main .text::after {
 main .text::after {
   content: "</html>";
 }
-main .text .intro,
-main .text .name,
-main .text .role {
+main .text .intro, main .text .name, main .text .role {
   color: #f6f6f6;
   margin: 0 0 0 1rem;
   width: 100%;
 }
 main .text .intro {
   font-size: 3rem;
-  -webkit-animation: fadein 2.2s;
-          animation: fadein 2.2s;
+  -webkit-animation: fadeTop 2.2s;
+          animation: fadeTop 2.2s;
 }
 main .text .name {
   font-weight: 600;
@@ -118,6 +115,7 @@ main .mobile-footer {
   line-height: 2rem;
   font-family: "Josefin sans";
   color: #f6f6f6;
+  background-color: #101010;
   margin-top: 2rem;
   font-size: 2rem;
 }
@@ -135,19 +133,23 @@ main .mobile-footer {
 }
 
 /* Animations */
-@-webkit-keyframes fadein {
+@-webkit-keyframes fadeTop {
   from {
+    transform: translateY(-50vh);
     opacity: 0;
   }
   to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
-@keyframes fadein {
+@keyframes fadeTop {
   from {
+    transform: translateY(-50vh);
     opacity: 0;
   }
   to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -183,8 +185,7 @@ main .mobile-footer {
     background-color: #101010;
     height: 100vh;
   }
-  .mobile-header,
-.mobile-footer {
+  .mobile-header, .mobile-footer {
     position: relative !important;
     top: 0 !important;
     background-color: transparent !important;
@@ -207,8 +208,7 @@ main .mobile-footer {
     margin: 0;
     width: 80vw;
   }
-  .first main .bar-1,
-.first main .bar-2 {
+  .first main .bar-1, .first main .bar-2 {
     margin: 0;
   }
   .first main .pattern {
@@ -218,9 +218,7 @@ main .mobile-footer {
     margin: 2rem 0 2rem 0;
     width: 100%;
   }
-  .first main .text .intro,
-.first main .text .name,
-.first main .text .role {
+  .first main .text .intro, .first main .text .name, .first main .text .role {
     text-align: center;
     margin: 0;
     font-size: 2.5rem;

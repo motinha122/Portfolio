@@ -36,8 +36,7 @@ main {
   height: 100vh;
   margin: auto;
 
-  .bar-1,
-  .bar-2 {
+  .bar-1,.bar-2 {
     width: 95%;
     height: 1rem;
     background-color: rgb(245, 126, 14);
@@ -70,9 +69,7 @@ main {
       content: "</html>";
     }
 
-    .intro,
-    .name,
-    .role {
+    .intro,.name,.role {
       color: #f6f6f6;
       margin: 0 0 0 1rem;
       width: 100%;
@@ -80,7 +77,7 @@ main {
 
     .intro {
       font-size: 3rem;
-      animation: fadein 2.2s;
+      animation: fadeTop 2.2s;
     }
 
     .name {
@@ -133,6 +130,7 @@ main {
     line-height: 2rem;
     font-family: "Josefin sans";
     color: #f6f6f6;
+    background-color: #101010;
     margin-top: 2rem;
     font-size: 2rem;
   }
@@ -154,12 +152,14 @@ main {
 
 /* Animations */
 
-@keyframes fadein {
+@keyframes fadeTop {
   from {
+    transform: translateY(-50vh);
     opacity: 0;
   }
 
   to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -196,8 +196,7 @@ main {
     height: 100vh;
   }
 
-  .mobile-header,
-  .mobile-footer {
+  .mobile-header,.mobile-footer {
     position: relative !important;
     top: 0 !important;
     background-color:transparent !important;
@@ -214,8 +213,7 @@ main {
     flex-direction: column;
 
     main {
-      .bar-1,
-      .bar-2 {
+      .bar-1,.bar-2 {
         margin: 0;
       }
 
@@ -232,16 +230,13 @@ main {
         margin: 2rem 0 2rem 0;
         width: 100%;
 
-        .intro,
-        .name,
-        .role {
+        .intro,.name,.role {
           text-align: center;
           margin: 0;
           font-size: 2.5rem;
         }
 
-        &::before,
-        &::after {
+        &::before,&::after {
           display: none;
         }
       }
