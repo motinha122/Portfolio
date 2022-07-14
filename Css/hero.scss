@@ -15,7 +15,7 @@
 body {
   @include center-div();
   font-family: "Poppins", sans-serif;
-  background-color: #1a1a1a;
+  background-color: #101010;
   background-image: url(/images/Background.png);
   background-position: right;
   background-size: contain;
@@ -25,7 +25,6 @@ body {
 
 .first {
   width: 100%;
-  backdrop-filter: brightness(0.5);
   @include center-div();
   height: 100%;
 }
@@ -129,7 +128,6 @@ main {
 
   .mobile-footer {
     position: absolute;
-    backdrop-filter: brightness(0.1);
     top: 80%;
     text-align: center;
     line-height: 2rem;
@@ -194,7 +192,7 @@ main {
 @media screen and (max-width: 900px) {
   body {
     background-image: none;
-    background-color: #1a1a1a;
+    background-color: #101010;
     height: 100vh;
   }
 
