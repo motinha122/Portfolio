@@ -2,6 +2,8 @@
 /* Body */
 .mobile-header {
   display: none;
+  -webkit-animation: fadeTop 2.5s ease-out;
+          animation: fadeTop 2.5s ease-out;
 }
 
 body {
@@ -129,8 +131,8 @@ main .mobile-footer {
 }
 main .mobile-footer span {
   color: #f57e0e;
-  -webkit-animation: floating 4s ease-in-out infinite;
-          animation: floating 4s ease-in-out infinite;
+  -webkit-animation: blink 4s ease-in-out infinite;
+          animation: blink 4s ease-in-out infinite;
 }
 
 /* PC Spline */
@@ -139,6 +141,9 @@ main .mobile-footer span {
   align-items: center;
   width: 60vw;
   height: 100vh;
+}
+.laptop img {
+  display: none;
 }
 .laptop iframe {
   width: 60vw;
@@ -202,7 +207,7 @@ main .mobile-footer span {
     opacity: 0.3;
   }
 }
-@-webkit-keyframes floating {
+@-webkit-keyframes blink {
   0% {
     opacity: 0;
   }
@@ -213,7 +218,7 @@ main .mobile-footer span {
     opacity: 0;
   }
 }
-@keyframes floating {
+@keyframes blink {
   0% {
     opacity: 0;
   }
@@ -235,6 +240,20 @@ main .mobile-footer span {
   }
 }
 @media screen and (max-width: 900px) {
+  .laptop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .laptop img {
+    -webkit-animation: fadeDown 3s ease-in-out;
+            animation: fadeDown 3s ease-in-out;
+    display: flex;
+    width: 80vw;
+  }
+  .laptop iframe {
+    display: none;
+  }
   body {
     background-image: none;
     background-color: #101010;

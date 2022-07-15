@@ -10,6 +10,7 @@
 
 .mobile-header {
   display: none;
+  animation: fadeTop 2.5s ease-out;
 }
 
 body {
@@ -140,7 +141,7 @@ main {
 
     span {
       color: #f57e0e;
-      animation: floating 4s ease-in-out infinite;
+      animation: blink 4s ease-in-out infinite;
     }
   }
 }
@@ -152,6 +153,8 @@ main {
   align-items: center;
   width: 60vw;
   height: 100vh;
+
+  img {display: none;}
 
   iframe {
     width: 60vw;
@@ -195,7 +198,7 @@ main {
   }
 }
 
-@keyframes floating {
+@keyframes blink {
   0% {
     opacity: 0;
   }
@@ -225,6 +228,16 @@ main {
 }
 
 @media screen and (max-width: 900px) {
+  .laptop {
+    @include center-div();
+    img {
+      animation: fadeDown 3s ease-in-out;
+      display: flex;
+      width: 80vw;
+    }
+    iframe {display: none;}
+  }
+
   body {
     background-image: none;
     background-color: #101010;
