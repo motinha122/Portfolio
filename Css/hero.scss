@@ -37,7 +37,8 @@ main {
   height: 100vh;
   margin: auto;
 
-  .bar-1,.bar-2 {
+  .bar-1,
+  .bar-2 {
     width: 95%;
     height: 1rem;
     background-color: rgb(245, 126, 14);
@@ -71,7 +72,9 @@ main {
       content: "</html>";
     }
 
-    .intro,.name,.role {
+    .intro,
+    .name,
+    .role {
       color: #f6f6f6;
       margin: 0 0 0 1rem;
       width: 100%;
@@ -94,7 +97,7 @@ main {
       font-size: 32px;
       animation: fadeDown 2s ease-in;
       letter-spacing: 2px;
-      
+
       span {
         transition: 0.4s;
         letter-spacing: 3px;
@@ -156,7 +159,9 @@ main {
   width: 60vw;
   height: 100vh;
 
-  img {display: none;}
+  img {
+    display: none;
+  }
 
   iframe {
     width: 60vw;
@@ -237,7 +242,9 @@ main {
       display: flex;
       width: 80vw;
     }
-    iframe {display: none;}
+    iframe {
+      display: none;
+    }
   }
 
   body {
@@ -246,10 +253,11 @@ main {
     height: 100vh;
   }
 
-  .mobile-header,.mobile-footer {
+  .mobile-header,
+  .mobile-footer {
     position: relative !important;
     top: 0 !important;
-    background-color:transparent !important;
+    background-color: transparent !important;
     text-align: center;
     display: flex;
     font-family: "Josefin sans";
@@ -263,7 +271,8 @@ main {
     flex-direction: column;
 
     main {
-      .bar-1,.bar-2 {
+      .bar-1,
+      .bar-2 {
         margin: 0;
       }
 
@@ -280,13 +289,16 @@ main {
         margin: 2rem 0 2rem 0;
         width: 100%;
 
-        .intro,.name,.role {
+        .intro,
+        .name,
+        .role {
           text-align: center;
           margin: 0;
           font-size: 2.5rem;
         }
 
-        &::before,&::after {
+        &::before,
+        &::after {
           display: none;
         }
       }
