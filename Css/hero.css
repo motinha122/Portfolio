@@ -42,9 +42,13 @@ main .bar-1, main .bar-2 {
 }
 main .bar-1 {
   margin-top: 2rem;
+  -webkit-animation: fadeTop 2.5s ease-out;
+          animation: fadeTop 2.5s ease-out;
 }
 main .bar-2 {
   margin-bottom: 2rem;
+  -webkit-animation: fadeDown 2.5s ease-out;
+          animation: fadeDown 2.5s ease-out;
 }
 main .text {
   margin: 4rem auto 4rem 1rem;
@@ -56,8 +60,8 @@ main .text::before, main .text::after {
   opacity: 0.4;
   font-size: 2rem;
   content: "<html>";
-  -webkit-animation: fadein2 0.5s;
-          animation: fadein2 0.5s;
+  -webkit-animation: fadein2 4s ease-in;
+          animation: fadein2 4s ease-in;
 }
 main .text::after {
   content: "</html>";
@@ -69,21 +73,21 @@ main .text .intro, main .text .name, main .text .role {
 }
 main .text .intro {
   font-size: 3rem;
-  -webkit-animation: fadeTop 2.2s;
-          animation: fadeTop 2.2s;
+  -webkit-animation: fadeTop 2s ease-in;
+          animation: fadeTop 2s ease-in;
 }
 main .text .name {
   font-weight: 600;
   font-size: 4.5rem;
-  -webkit-animation: fadein 2.8s;
-          animation: fadein 2.8s;
+  -webkit-animation: fadeTop 2s ease;
+          animation: fadeTop 2s ease;
   margin-bottom: 10px;
 }
 main .text .role {
   margin-bottom: 10px;
   font-size: 32px;
-  -webkit-animation: fadein 2.6s;
-          animation: fadein 2.6s;
+  -webkit-animation: fadeDown 2s ease-in;
+          animation: fadeDown 2s ease-in;
 }
 main .text .role span {
   transition: 0.4s;
@@ -110,6 +114,8 @@ main:hover .pattern img {
 }
 main .mobile-footer {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 80%;
   text-align: center;
   line-height: 2rem;
@@ -118,6 +124,13 @@ main .mobile-footer {
   background-color: #101010;
   margin-top: 2rem;
   font-size: 2rem;
+  -webkit-animation: fadeDown 4s ease-out;
+          animation: fadeDown 4s ease-out;
+}
+main .mobile-footer span {
+  color: #f57e0e;
+  -webkit-animation: floating 4s ease-in-out infinite;
+          animation: floating 4s ease-in-out infinite;
 }
 
 /* PC Spline */
@@ -135,7 +148,7 @@ main .mobile-footer {
 /* Animations */
 @-webkit-keyframes fadeTop {
   from {
-    transform: translateY(-50vh);
+    transform: translateY(-40vh);
     opacity: 0;
   }
   to {
@@ -145,7 +158,27 @@ main .mobile-footer {
 }
 @keyframes fadeTop {
   from {
-    transform: translateY(-50vh);
+    transform: translateY(-40vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeDown {
+  from {
+    transform: translateY(40vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeDown {
+  from {
+    transform: translateY(40vh);
     opacity: 0;
   }
   to {
@@ -167,6 +200,28 @@ main .mobile-footer {
   }
   to {
     opacity: 0.3;
+  }
+}
+@-webkit-keyframes floating {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes floating {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 /* Media Query */

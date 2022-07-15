@@ -45,10 +45,11 @@ main {
 
   .bar-1 {
     margin-top: 2rem;
+    animation: fadeTop 2.5s ease-out;
   }
-
   .bar-2 {
     margin-bottom: 2rem;
+    animation: fadeDown 2.5s ease-out;
   }
 
   .text {
@@ -62,7 +63,7 @@ main {
       opacity: 0.4;
       font-size: 2rem;
       content: "<html>";
-      animation: fadein2 0.5s;
+      animation: fadein2 4s ease-in;
     }
 
     &::after {
@@ -77,20 +78,20 @@ main {
 
     .intro {
       font-size: 3rem;
-      animation: fadeTop 2.2s;
+      animation: fadeTop 2s ease-in;
     }
 
     .name {
       font-weight: 600;
       font-size: 4.5rem;
-      animation: fadein 2.8s;
+      animation: fadeTop 2s ease;
       margin-bottom: 10px;
     }
 
     .role {
       margin-bottom: 10px;
       font-size: 32px;
-      animation: fadein 2.6s;
+      animation: fadeDown 2s ease-in;
 
       span {
         transition: 0.4s;
@@ -125,6 +126,8 @@ main {
 
   .mobile-footer {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     top: 80%;
     text-align: center;
     line-height: 2rem;
@@ -133,6 +136,12 @@ main {
     background-color: #101010;
     margin-top: 2rem;
     font-size: 2rem;
+    animation: fadeDown 4s ease-out;
+
+    span {
+      color: #f57e0e;
+      animation: floating 4s ease-in-out infinite;
+    }
   }
 }
 
@@ -154,7 +163,19 @@ main {
 
 @keyframes fadeTop {
   from {
-    transform: translateY(-50vh);
+    transform: translateY(-40vh);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    transform: translateY(40vh);
     opacity: 0;
   }
 
@@ -171,6 +192,20 @@ main {
 
   to {
     opacity: 0.3;
+  }
+}
+
+@keyframes floating {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
 
