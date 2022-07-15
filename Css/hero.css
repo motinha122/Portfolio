@@ -90,9 +90,11 @@ main .text .role {
   font-size: 32px;
   -webkit-animation: fadeDown 2s ease-in;
           animation: fadeDown 2s ease-in;
+  letter-spacing: 2px;
 }
 main .text .role span {
   transition: 0.4s;
+  letter-spacing: 3px;
   color: #f57e0e;
   text-shadow: #f57e0e 0 0 2px;
 }

@@ -93,9 +93,11 @@ main {
       margin-bottom: 10px;
       font-size: 32px;
       animation: fadeDown 2s ease-in;
-
+      letter-spacing: 2px;
+      
       span {
         transition: 0.4s;
+        letter-spacing: 3px;
         color: #f57e0e;
         text-shadow: #f57e0e 0 0 2px;
       }
