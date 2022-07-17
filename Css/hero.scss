@@ -10,6 +10,7 @@
 
 .mobile-header {
   display: none;
+  animation: fadeBottom 5s;
 }
 
 body {
@@ -61,10 +62,10 @@ main {
     &::after {
       font-family: "Josefin sans";
       color: #f5f5f5;
-      opacity: 0.4;
+      opacity: 0.3;
       font-size: 2rem;
       content: "<html>";
-      animation: fadein2 0.5s;
+      animation: fadeLow 5s;
     }
 
     &::after {
@@ -81,20 +82,20 @@ main {
 
     .intro {
       font-size: 3rem;
-      animation: fadein 2.2s;
+      animation: fadeTop 2s;
     }
 
     .name {
       font-weight: 600;
       font-size: 4.5rem;
-      animation: fadein 2.8s;
       margin-bottom: 10px;
+      animation: fadeMid 4s;
     }
 
     .role {
       margin-bottom: 10px;
       font-size: 32px;
-      animation: fadein 2.6s;
+      animation: fadeBottom 2s;
 
       span {
         transition: 0.4s;
@@ -156,21 +157,41 @@ main {
 
 /* Animations */
 
-@keyframes fadein {
+@keyframes fadeTop {
+  from {
+    opacity: 0;
+    transform: translateY(-400px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeMid {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
 }
 
-@keyframes fadein2 {
+@keyframes fadeBottom {
+  from {
+    opacity: 0;
+    transform: translateY(400px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLow {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 0.3;
   }
@@ -202,7 +223,7 @@ main {
   .mobile-footer {
     position: relative !important;
     top: 0 !important;
-    background-color:transparent !important;
+    background-color: transparent !important;
     text-align: center;
     display: flex;
     font-family: "Josefin sans";
@@ -216,6 +237,7 @@ main {
     flex-direction: column;
 
     main {
+
       .bar-1,
       .bar-2 {
         margin: 0;
